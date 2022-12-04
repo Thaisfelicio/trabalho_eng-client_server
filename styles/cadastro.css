@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(56 106 67);
+}
+
+#principal {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+.caixa_login {
+  box-shadow: 4px 6px 1px #09f009;
+  background-color: #0a4646;
+  width: 410px;
+  height: 680px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5rem;
+  display: inline-flex;
+  margin-top: 8rem;
+}
+
+.titulo_caixa {
+  color: gold;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+.inputs {
+  background-color: rgba(255, 255, 255, 1);
+  width: 289px;
+  height: 62px;
+  border-radius: 15px;
+  font-size: 30px;
+}
+
+.botao_entrar {
+  background-color: rgba(
+    239.00000095367432,
+    71.00000336766243,
+    111.00000098347664,
+    1
+  );
+  width: 193px;
+  height: 65px;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  border: #0a4646;
+  box-shadow: 1px 1px 2px #80020c;
+  transform: translateX(70px);
+  margin-top: 10px;
+}
+.label {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+}
+
+.imagem {
+  margin-top: 3rem;
+  display: inline-flex;
+
+}
+#login{
+  color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  font-family: "Inter", sans-serif;
+}
+a{
+  color: gold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* !daqui pra baixo eu copiei do arquivo formularioCadastro.css, precisa de alguns ajustes */
+.form-control span {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-control small {
+  position: absolute;
+  color: blue;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.sucess input {
+  border-color: rgb(89, 139, 14);
+}
+.form-control.error input {
+  border-color: lightcoral;
+}
+.form-control.sucess .material-symbols-outlined {
+  border-color: green;
+  color: rgb(89, 139, 14);
+  visibility: visible;
+}
+.form-control.error .material-symbols-sharp {
+  border-color: red;
+  color: lightcoral;
+  visibility: visible;
+}
+.form-control.error small {
+  visibility: visible;
+  color: lightcoral;
+}
+.form {
+  padding: 20px;
+  justify-content: center;
+}
+.form-control {
+  padding-bottom: 20px;
+  position: relative;
+  margin-left: 20px;
+}
+
+
+.inputs.sucess input {
+  border-color: rgb(89, 139, 14);
+}
+.inputs.error input {
+  border-color: lightcoral;
+}
+.material-symbols-outlined {
+  border-color: green;
+  color: rgb(89, 139, 14);
+  visibility: visible;
+}
+.material-symbols-sharp {
+  border-color: red;
+  color: lightcoral;
+  visibility: visible;
+}
+

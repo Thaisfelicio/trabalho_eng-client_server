@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@100&display=swap");
+
+body {
+  margin: 0;
+}
+.main-login {
+  width: 100%;
+  height: 100vh;
+  background-color: #0a4646;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-login {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-login > h1 {
+  font-size: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e5ece5;
+}
+.left-login-img {
+  width: 75%;
+}
+
+.right-login {
+  width: 50%;
+  height: 50vh;
+  color: #e9f0e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-login {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px, 35px;
+  background: #0a4646;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40pc #09f009;
+}
+.card-login > h1 {
+  color: #16f786;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.textfied {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.textfied > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  background: #f1eff7;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40pc #000056;
+  box-sizing: border-box;
+}
+
+.textfied > label {
+  color: rgb(239, 232, 232);
+  margin-bottom: 10px;
+}
+
+.textfied > input::placeholder {
+  color: #f1eff7;
+}
+
+.btn-login {
+  width: 65%;
+  padding: 10px 10px;
+  margin: 15px;
+  font-size: 12pt;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: #09f009;
+  cursor: pointer;
+}
+.btn-login:hover {
+  background: #09f009;
+  color: rgb(4, 4, 4);
+  box-shadow: 0px 5px 0px;
+}
+
+.btn-login:active {
+  position: relative;
+  top: 4px;
+  box-shadow: none;
+}
+a{
+  color: gold;
+}

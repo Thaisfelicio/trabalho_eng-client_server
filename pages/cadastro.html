@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/image.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/cadastro.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"
+    />
+    <!-- <script src="../../2Logic/logicaCadastro.js" defer></script> -->
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div id="principal">
+        <div class="imagem">
+        <img
+          src="../images/undraw_lost_online_re_upmy.svg"
+          alt="carinha fazendo login"
+        />
+        </div>
+        <div class="caixa_login">
+          <h2 class="titulo_caixa">Cadastre-se</h2>
+          <form id="form" class="form" method="post">
+            <!--------------- Email ------------->
+            <div class="form-control">
+              <label for="usuario" class="label">E-mail</label>
+              <input type="email" class="inputs" name="email" id="inputEmail"/>
+              <span class="material-symbols-sharp"> info </span>
+              <span class="material-symbols-outlined"> check </span>
+              <small></small>
+            </div>
+            <!--------------- Senha ------------->
+            <div class="form-control">
+              <label for="senha" class="label">Senha</label>
+              <input type="password" class="inputs" name="senha" id="inputSenha"/>
+              <span class="material-symbols-sharp"> info </span>
+              <span class="material-symbols-outlined"> check </span>
+              <small></small>
+            </div>
+            <!--------- Confirmar Senha --------->
+            <div class="form-control">
+              <label for="confirmarSenha" class="label">Confirmar Senha</label>
+              <input type="password" class="inputs" name="confirmarSenha" id="inputConfirmarSenha"/>
+              <span class="material-symbols-sharp"> info </span>
+              <span class="material-symbols-outlined"> check </span>
+              <h5 id="login">Já possui uma conta? <a>Fazer Login</a></h5>
+              <small></small>
+            </div>
+            
+            <button type="submit" class="botao_entrar">Entrar</button>
+          </form>
+        </div>
+    </div>
+    <!-- <script type="module" src="../../2Logic/logicaCadastro.js"></script> -->
+  </body>
+</html>
