@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/image.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style2.css">
-    <!-- <script src="../../2Logic/logicaLogin.js" defer></script> -->
-    
+    <link rel="stylesheet" href="../styles/style2.css">    
     <title>Login</title>
 </head>
 <STYLE>A {text-decoration: none;} </STYLE>
@@ -18,28 +16,23 @@
         <img src="../images/imagem.svg" class="left-login-img" alt="capa">
        </div> 
        <div class="right-login">
-            <div class="card-login">
                 <br>
-                <div class="textfied">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" placeholder="Digite seu E-mail">
-                </div>
-                <div class="textfied">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <div class="textfied">
+                <form class="card-login" method="post">
+                    <div class="textfied">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="Email" placeholder="Digite seu E-mail">
+                    </div>
+                    <div class="textfied">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="Senha" placeholder="Senha">
+                    </div>
+                    <div class="textfied">
                     <span>Não possui uma conta? <a href="">Cadastre-se</a></span>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn-login">Login</button>
+                    </form>
                 </div>
-                <br>
-                <button class="btn-login">Login</button>
-                
-
-                
-                
-                
-            </div>
-       </div>
-    </div>
+        </div>
 </body>
 </html>

@@ -1,15 +1,9 @@
-//import express from "express";
+//exportações
 const express = require("express");
 const app = express();
-
-// import mongoose from "mongoose";
-// import bodyParser from "body-parser";
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
-//exportações
 const User = require('./models/User');
-const { redirect } = require("express/lib/response");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
@@ -26,11 +20,15 @@ app.get("/", function(req, res){
   app.use(express.static(__dirname + '/images'))
   app.use('/images', express.static('images'))
 
+  app.use(express.static(__dirname + '/pages'))
+  app.use('/pages', express.static('pages'))
+
   res.sendFile(__dirname + "/pages/cadastro.html");
 
   
     //res.status(200).json({msg: 'welcome to this api'});
 })
+
 mongoose.connect("mongodb+srv://ThaisFelicio:fjmaXzX3zqpUjEze@dadoscurriculo.otgkmeg.mongodb.net/Users", {useNewUrlParser: true}, {useUnifiedTopology: true}).then(() =>{
     app.listen(3001)
     console.log("database connected");
@@ -51,7 +49,7 @@ app.get('/user/:id', async(req, res)=>{
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CADASTRO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 app.post("/", async(req, res) =>{
-
+  
     //const {email, senha, confirmarSenha} = req.body;
     const email = req.body.email;
     const senha = req.body.senha;
@@ -99,49 +97,43 @@ app.post("/", async(req, res) =>{
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++ LOGIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
-app.post("/pages/login", async (req, res) =>{
-  app.use(express.static(__dirname + '/styles'))
-  app.use('/styles', express.static('styles'))
+// app.post("/", async (req, res) =>{
+//   //const {email, senha} = req.body;
+  
 
-  app.use(express.static(__dirname + '/images'))
-  app.use('/images', express.static('images'))
+//   const email = req.body.Email;
+//   const senha = req.body.Senha;
 
-  //res.sendFile(__dirname + "/pages/login.html");
+//   //validações
+//   if(!email){
+//     return res.status(422).json({msg: 'o email é obrigatório'});
+//   }
+//   if(!senha){
+//     return res.status(422).json({msg: 'a senha é obrigatória'});
+//   }
 
-  //const {email, senha} = req.body;
-  const email = req.body.email;
-  const senha = req.body.senha;
+//   //checar se o usuario existe
+//   const newUser = await User.findOne({ email: email});
 
-  //validações
-  if(!email){
-    return res.status(422).json({msg: 'o email é obrigatório'});
-  }
-  if(!senha){
-    return res.status(422).json({msg: 'a senha é obrigatória'});
-  }
+//       if(!newUser){
+//         return res.status(404).json({msg: 'Por favor, utilize outro email'});
+//       }
 
-  //checar se o usuario existe
-  const newUser = await User.findOne({ email: email});
+//   //checar se as senhas conferem
+//   const checkSenha = await compare(senha, newUser.senha)
+//   if(!checkSenha){
+//     return res.status(422).json({msg: 'Senha inválida!'})
+//   }
 
-      if(newUser){
-        return res.status(404).json({msg: 'Por favor, utilize outro email'});
-      }
+//   try {
 
-  //checar se as senhas conferem
-  const checkSenha = await compare(senha, newUser.senha)
-  if(!checkSenha){
-    return res.status(422).json({meg: 'Senha inválida!'})
-  }
+//     return res.status(201).json({msg: 'Usuário existe!'});
 
-  try {
-
-    return res.status(201).json({msg: 'Usuário existe!'});
-
-  } catch (err) {
-    console.log(err)
-    res.status(500).json({msg: 'Aconteceu um erro no servidor, tente novamente mais tarde!'})
-  }
-})
+//   } catch (err) {
+//     console.log(err)
+//     res.status(500).json({msg: 'Aconteceu um erro no servidor, tente novamente mais tarde!'})
+//   }
+// })
 
 
 
